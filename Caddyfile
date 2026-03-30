@@ -1,0 +1,10 @@
+# Replace YOUR_DOMAIN with your actual domain
+YOUR_DOMAIN {
+    reverse_proxy backend:8000
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+}
